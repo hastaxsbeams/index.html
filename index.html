@@ -2,1063 +2,1067 @@
 <html lang="pt-BR">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>𝗛𝗮𝘀𝘁𝗮𝘅𝘀 𝗯𝗲𝗮𝗺𝘀 | Gerador de links Roblox premium</title>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        :root {
-            --bg: #000000;
-            --panel: #000000;
-            --input: #555555;
-            --accent: #555555;
-            --accent-hover: #555555;
-            --text: #f0f1f5;
-            --text-muted: #949ba4;
-            --border: #292222;
-            --success: #3ba55c;
-            --error: #ed4245;
-            --warning: #faa61a;
-            --tooltip: #000000;
-            --shortener-active: rgba(68, 0, 0, 0.2);
-            --shortener-hover: rgba(77, 0, 0, 0.05);
-            --discord: #5865f2;
-            --discord-hover: #4752c4;
-            --glass: rgba(0, 0, 0, 0.05);
-            --glass-border: rgba(0, 0, 0, 0.1);
-        }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>𝗛𝗮𝘀𝘁𝗮𝘅𝘀 𝗯𝗲𝗮𝗺𝘀 | Gerador de links Roblox premium</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg: #000000;
+            --panel: #000000;
+            --input: #555555;
+            --accent: #555555;
+            --accent-hover: #555555;
+            --text: #f0f1f5;
+            --text-muted: #949ba4;
+            --border: #292222;
+            --success: #3ba55c;
+            --error: #ed4245;
+            --warning: #faa61a;
+            --tooltip: #000000;
+            --shortener-active: rgba(68, 0, 0, 0.2);
+            --shortener-hover: rgba(77, 0, 0, 0.05);
+            --discord: #5865f2;
+            --discord-hover: #4752c4;
+            --glass: rgba(0, 0, 0, 0.05);
+            --glass-border: rgba(0, 0, 0, 0.1);
+        }
 
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
 
-        body {
-            font-family: 'Poppins', sans-serif;
-            background: var(--bg);
-            color: var(--text);
-            line-height: 1.6;
-            padding: 20px;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-image: radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.15) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.15) 0%, transparent 50%);
-        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-image: radial-gradient(circle at 25% 25%, rgba(0, 0, 0, 0.15) 0%, transparent 50%), radial-gradient(circle at 75% 75%, rgba(0, 0, 0, 0.15) 0%, transparent 50%);
+        }
 
-        .container {
-            width: 100%;
-            max-width: 1000px;
-            background: var(--panel);
-            border-radius: 16px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            margin: 20px 0;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            opacity: 0;
-            transform: translateY(20px);
-            animation: fadeInUp 0.6s ease forwards;
-            border: 1px solid var(--glass-border);
-            backdrop-filter: blur(8px);
-        }
+        .container {
+            width: 100%;
+            max-width: 1000px;
+            background: var(--panel);
+            border-radius: 16px;
+            overflow: hidden;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            margin: 20px 0;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease forwards;
+            border: 1px solid var(--glass-border);
+            backdrop-filter: blur(8px);
+        }
 
-        @keyframes fadeInUp {
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-        .container:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-        }
+        .container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
 
-        header {
-            padding: 30px;
-            border-bottom: 1px solid var(--border);
-            background: var(--glass);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
+        header {
+            padding: 30px;
+            border-bottom: 1px solid var(--border);
+            background: var(--glass);
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
 
-        header::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 4px;
-            background: linear-gradient(90deg, var(--accent), #9b59b6);
-            z-index: 1;
-        }
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), #9b59b6);
+            z-index: 1;
+        }
 
-        .header-content {
-            flex: 1;
-            min-width: 250px;
-        }
+        .header-content {
+            flex: 1;
+            min-width: 250px;
+        }
 
-        h1 {
-            margin: 0;
-            font-size: 32px;
-            font-weight: 700;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            background: linear-gradient(90deg, #f0f1f5, #b8bcc8);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
-        }
+        h1 {
+            margin: 0;
+            font-size: 32px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            background: linear-gradient(90deg, #f0f1f5, #b8bcc8);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
 
-        .description {
-            color: var(--text-muted);
-            margin-top: 10px;
-            font-size: 16px;
-            max-width: 600px;
-        }
+        .description {
+            color: var(--text-muted);
+            margin-top: 10px;
+            font-size: 16px;
+            max-width: 600px;
+        }
 
-        /* Premium Discord Button */
+        /* Premium Discord Button */
 
-        .discord-btn-container {
-            position: relative;
-            z-index: 2;
-        }
+        .discord-btn-container {
+            position: relative;
+            z-index: 2;
+        }
 
-        .discord-btn {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            padding: 12px 24px;
-            border-radius: 8px;
-            background: var(--discord);
-            color: white;
-            font-weight: 600;
-            font-size: 16px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
-            position: relative;
-            overflow: hidden;
-            border: none;
-            cursor: pointer;
-        }
+        .discord-btn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 24px;
+            border-radius: 8px;
+            background: var(--discord);
+            color: white;
+            font-weight: 600;
+            font-size: 16px;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+            position: relative;
+            overflow: hidden;
+            border: none;
+            cursor: pointer;
+        }
 
-        .discord-btn::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
-            transform: translateX(-100%);
-            transition: transform 0.6s ease;
-        }
+        .discord-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transform: translateX(-100%);
+            transition: transform 0.6s ease;
+        }
 
-        .discord-btn:hover {
-            background: var(--discord-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
-        }
+        .discord-btn:hover {
+            background: var(--discord-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
+        }
 
-        .discord-btn:hover::before {
-            transform: translateX(100%);
-        }
+        .discord-btn:hover::before {
+            transform: translateX(100%);
+        }
 
-        .discord-btn i {
-            font-size: 20px;
-        }
+        .discord-btn i {
+            font-size: 20px;
+        }
 
-        .tab-container {
-            display: flex;
-            border-bottom: 1px solid var(--border);
-            background: var(--glass);
-            position: relative;
-        }
+        .tab-container {
+            display: flex;
+            border-bottom: 1px solid var(--border);
+            background: var(--glass);
+            position: relative;
+        }
 
-        .tab {
-            padding: 18px 30px;
-            cursor: pointer;
-            position: relative;
-            font-weight: 500;
-            color: var(--text-muted);
-            transition: all 0.3s ease;
-            user-select: none;
-            white-space: nowrap;
-            font-size: 15px;
-        }
+        .tab {
+            padding: 18px 30px;
+            cursor: pointer;
+            position: relative;
+            font-weight: 500;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
+            user-select: none;
+            white-space: nowrap;
+            font-size: 15px;
+        }
 
-        .tab:hover {
-            color: var(--text);
-            background: rgba(255, 255, 255, 0.03);
-        }
+        .tab:hover {
+            color: var(--text);
+            background: rgba(255, 255, 255, 0.03);
+        }
 
-        .tab.active {
-            color: var(--text);
-            font-weight: 600;
-        }
+        .tab.active {
+            color: var(--text);
+            font-weight: 600;
+        }
 
-        .tab.active::after {
-            content: '';
-            position: absolute;
-            bottom: -1px;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background: var(--accent);
-            border-radius: 3px 3px 0 0;
-            z-index: 2;
-        }
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -1px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: var(--accent);
+            border-radius: 3px 3px 0 0;
+            z-index: 2;
+        }
 
-        .tab i {
-            margin-right: 8px;
-            font-size: 16px;
-        }
+        .tab i {
+            margin-right: 8px;
+            font-size: 16px;
+        }
 
-        .tab-content {
-            display: none;
-            padding: 30px;
-            animation: fadeIn 0.4s ease;
-        }
+        .tab-content {
+            display: none;
+            padding: 30px;
+            animation: fadeIn 0.4s ease;
+        }
 
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(10px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
 
-        .tab-content.active {
-            display: block;
-        }
+        .tab-content.active {
+            display: block;
+        }
 
-        .form-group {
-            margin-bottom: 25px;
-        }
+        .form-group {
+            margin-bottom: 25px;
+        }
 
-        label {
-            display: block;
-            margin-bottom: 10px;
-            font-weight: 500;
-            font-size: 16px;
-            color: var(--text);
-        }
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: 500;
+            font-size: 16px;
+            color: var(--text);
+        }
 
-        .required::after {
-            content: ' *';
-            color: var(--error);
-        }
+        .required::after {
+            content: ' *';
+            color: var(--error);
+        }
 
-        input {
-            width: 100%;
-            padding: 14px 18px;
-            background: var(--input);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text);
-            font-family: inherit;
-            font-size: 16px;
-            transition: all 0.3s ease;
-        }
+        input {
+            width: 100%;
+            padding: 14px 18px;
+            background: var(--input);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text);
+            font-family: inherit;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
 
-        input:focus {
-            outline: none;
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.2);
-        }
+        input:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(88, 101, 242, 0.2);
+        }
 
-        input::placeholder {
-            color: var(--text-muted);
-            opacity: 0.7;
-        }
+        input::placeholder {
+            color: var(--text-muted);
+            opacity: 0.7;
+        }
 
-        .text-muted {
-            color: var(--text-muted);
-            font-size: 14px;
-            margin-top: 8px;
-            display: block;
-        }
+        .text-muted {
+            color: var(--text-muted);
+            font-size: 14px;
+            margin-top: 8px;
+            display: block;
+        }
 
-        button {
-            background: var(--accent);
-            color: white;
-            border: none;
-            padding: 14px 24px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: 600;
-            font-size: 16px;
-            transition: all 0.3s ease;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
-        }
+        button {
+            background: var(--accent);
+            color: white;
+            border: none;
+            padding: 14px 24px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            box-shadow: 0 4px 15px rgba(88, 101, 242, 0.3);
+        }
 
-        button:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
-        }
+        button:hover {
+            background: var(--accent-hover);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(88, 101, 242, 0.4);
+        }
 
-        button:active {
-            transform: translateY(0);
-        }
+        button:active {
+            transform: translateY(0);
+        }
 
-        button:disabled {
-            background: var(--text-muted);
-            cursor: not-allowed;
-            transform: none !important;
-            box-shadow: none;
-        }
+        button:disabled {
+            background: var(--text-muted);
+            cursor: not-allowed;
+            transform: none !important;
+            box-shadow: none;
+        }
 
-        .shortener-options {
-            display: flex;
-            gap: 12px;
-            margin-top: 12px;
-        }
+        .shortener-options {
+            display: flex;
+            gap: 12px;
+            margin-top: 12px;
+        }
 
-        .shortener-btn {
-            flex: 1;
-            background: transparent;
-            border: 1px solid var(--border);
-            color: var(--text-muted);
-            padding: 12px;
-            font-size: 15px;
-            border-radius: 8px;
-            transition: all 0.3s ease;
-        }
+        .shortener-btn {
+            flex: 1;
+            background: transparent;
+            border: 1px solid var(--border);
+            color: var(--text-muted);
+            padding: 12px;
+            font-size: 15px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
 
-        .shortener-btn:hover {
-            background: var(--shortener-hover);
-            color: var(--text);
-        }
+        .shortener-btn:hover {
+            background: var(--shortener-hover);
+            color: var(--text);
+        }
 
-        .shortener-btn.active {
-            border-color: var(--accent);
-            color: var(--text);
-            background: var(--shortener-active);
-        }
+        .shortener-btn.active {
+            border-color: var(--accent);
+            color: var(--text);
+            background: var(--shortener-active);
+        }
 
-        .result-container {
-            margin-top: 30px;
-        }
+        .result-container {
+            margin-top: 30px;
+        }
 
-        .result-box {
-            background: rgba(0, 0, 0, 0.3);
-            border-radius: 10px;
-            padding: 20px;
-            margin-top: 20px;
-            position: relative;
-            border: 1px solid var(--border);
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
+        .result-box {
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+            position: relative;
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+        }
 
-        .result-box:hover {
-            border-color: var(--accent);
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
-        }
+        .result-box:hover {
+            border-color: var(--accent);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
 
-        .result-label {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+        .result-label {
+            font-size: 14px;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
 
-        .result-content {
-            word-break: break-all;
-            font-family: 'Consolas', monospace;
-            font-size: 15px;
-            line-height: 1.6;
-            color: var(--text);
-        }
+        .result-content {
+            word-break: break-all;
+            font-family: 'Consolas', monospace;
+            font-size: 15px;
+            line-height: 1.6;
+            color: var(--text);
+        }
 
-        .copy-btn {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            background: rgba(255, 255, 255, 0.1);
-            color: var(--text);
-            border: none;
-            padding: 8px 14px;
-            border-radius: 6px;
-            font-size: 14px;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: all 0.3s ease;
-        }
+        .copy-btn {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--text);
+            border: none;
+            padding: 8px 14px;
+            border-radius: 6px;
+            font-size: 14px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            transition: all 0.3s ease;
+        }
 
-        .copy-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
-        }
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
 
-        .copy-btn.copied {
-            background: var(--success);
-            color: white;
-        }
+        .copy-btn.copied {
+            background: var(--success);
+            color: white;
+        }
 
-        .notification {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--success);
-            color: white;
-            padding: 15px 25px;
-            border-radius: 10px;
-            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-            transform: translateY(100px);
-            opacity: 0;
-            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            gap: 12px;
-            pointer-events: none;
-            backdrop-filter: blur(5px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+        .notification {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: var(--success);
+            color: white;
+            padding: 15px 25px;
+            border-radius: 10px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(100px);
+            opacity: 0;
+            transition: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            pointer-events: none;
+            backdrop-filter: blur(5px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
 
-        .notification.show {
-            transform: translateY(0);
-            opacity: 1;
-        }
+        .notification.show {
+            transform: translateY(0);
+            opacity: 1;
+        }
 
-        .notification.error {
-            background: var(--error);
-        }
+        .notification.error {
+            background: var(--error);
+        }
 
-        .notification.warning {
-            background: var(--warning);
-        }
+        .notification.warning {
+            background: var(--warning);
+        }
 
-        .footer {
-            margin-top: auto;
-            padding: 20px;
-            color: var(--text-muted);
-            font-size: 14px;
-            text-align: center;
-            width: 100%;
-        }
+        .footer {
+            margin-top: auto;
+            padding: 20px;
+            color: var(--text-muted);
+            font-size: 14px;
+            text-align: center;
+            width: 100%;
+        }
 
-        /* Loading spinner */
+        /* Loading spinner */
 
-        .spinner {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
-            border-radius: 50%;
-            border-top-color: white;
-            animation: spin 1s ease-in-out infinite;
-        }
+        .spinner {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-radius: 50%;
+            border-top-color: white;
+            animation: spin 1s ease-in-out infinite;
+        }
 
-        @keyframes spin {
-            to {
-                transform: rotate(360deg);
-            }
-        }
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
 
-        /* Glow effect for active elements */
+        /* Glow effect for active elements */
 
-        .glow {
-            animation: glow 2s infinite alternate;
-        }
+        .glow {
+            animation: glow 2s infinite alternate;
+        }
 
-        @keyframes glow {
-            from {
-                box-shadow: 0 0 5px rgba(88, 101, 242, 0.5);
-            }
-            to {
-                box-shadow: 0 0 20px rgba(88, 101, 242, 0.8);
-            }
-        }
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px rgba(88, 101, 242, 0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(88, 101, 242, 0.8);
+            }
+        }
 
-        /* Responsive styles */
+        /* Responsive styles */
 
-        @media (max-width: 768px) {
-            .container {
-                margin: 10px 0;
-                border-radius: 12px;
-            }
-            header {
-                padding: 20px;
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
-            }
-            .tab-container {
-                overflow-x: auto;
-                scrollbar-width: none;
-                -ms-overflow-style: none;
-            }
-            .tab-container::-webkit-scrollbar {
-                display: none;
-            }
-            .tab {
-                padding: 15px 20px;
-                font-size: 14px;
-            }
-            .tab-content {
-                padding: 20px;
-            }
-            .shortener-options {
-                flex-direction: column;
-            }
-            .discord-btn {
-                width: 100%;
-                justify-content: center;
-            }
-        }
+        @media (max-width: 768px) {
+            .container {
+                margin: 10px 0;
+                border-radius: 12px;
+            }
+            header {
+                padding: 20px;
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+            .tab-container {
+                overflow-x: auto;
+                scrollbar-width: none;
+                -ms-overflow-style: none;
+            }
+            .tab-container::-webkit-scrollbar {
+                display: none;
+            }
+            .tab {
+                padding: 15px 20px;
+                font-size: 14px;
+            }
+            .tab-content {
+                padding: 20px;
+            }
+            .shortener-options {
+                flex-direction: column;
+            }
+            .discord-btn {
+                width: 100%;
+                justify-content: center;
+            }
+        }
 
-        @media (max-width: 480px) {
-            body {
-                padding: 10px;
-            }
-            h1 {
-                font-size: 26px;
-            }
-            .description {
-                font-size: 14px;
-            }
-            .tab {
-                padding: 12px 15px;
-            }
-        }
-    </style>
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            h1 {
+                font-size: 26px;
+            }
+            .description {
+                font-size: 14px;
+            }
+            .tab {
+                padding: 12px 15px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <div class="header-content">
-                <h1>
-                    <i class="fas fa-link">𝗛𝗮𝘀𝘁𝗮𝘅𝘀 𝗯𝗲𝗮𝗺𝘀</i>
-                </h1>
-                <p class="description">Crie links premium do Roblox para o Discord com formatação avançada e encurtamento de URL.</p>
-            </div>
-            <div class="discord-btn-container">
-                <a href="https://discord.gg/G9Y2EGCpCq" target="_blank" class="discord-btn glow">
-                    <i class="fab fa-discord"></i>
-                    Entrar no nosso Discord
-                </a>
-            </div>
-        </header>
-
-        <div class="tab-container">
-            <div class="tab active" onclick="switchTab('profile')">
-                <i class="fas fa-user"></i> Link de Perfil
-            </div>
-            <div class="tab" onclick="switchTab('vip')">
-                <i class="fas fa-crown"></i> Servidor VIP
-            </div>
-            <div class="tab" onclick="switchTab('group')">
-                <i class="fas fa-users"></i> Link de Grupo
-            </div>
-        </div>
-
-        <div id="profile-tab" class="tab-content active">
-            <div class="form-group">
-                <label for="profileId" class="required">ID da Conta</label>
-                <input type="text" id="profileId" placeholder="123456789" pattern="\d*" inputmode="numeric">
-                <small class="text-muted">Apenas ID de usuário numérico do Roblox</small>
-            </div>
-
-            <div class="form-group">
-                <label for="profileBeam">URL de Redirecionamento</label>
-                <input type="url" id="profileBeam" placeholder="https://seu-link.com">
-                <small class="text-muted">URL para redirecionar quando clicado</small>
-            </div>
-
-            <div class="form-group">
-                <label>Serviço de Encurtamento</label>
-                <div class="shortener-options">
-                    <button class="shortener-btn active" onclick="setShortener('isgd', this)">
-                        <i class="fas fa-bolt"></i> is.gd
-                    </button>
-                    <button class="shortener-btn" onclick="setShortener('tinyurl', this)">
-                        <i class="fas fa-link"></i> TinyURL
-                    </button>
-                </div>
-            </div>
-
-            <button onclick="generateProfileLink()" id="profileGenerateBtn">
-                <i class="fas fa-magic"></i>
-                Gerar Link
-            </button>
-
-            <div class="result-container">
-                <div class="result-box">
-                    <div class="result-label">
-                        <i class="fas fa-eye"></i> Pré-visualização
-                    </div>
-                    <div class="result-content" id="profilePreview">https://www.roblox.com/users/123456789/profile</div>
-                </div>
-
-                <div class="result-box">
-                    <div class="result-label">
-                        <i class="fas fa-code"></i> Formatado para Discord
-                    </div>
-                    <div class="result-content" id="profileFormatted">[https*:*//www.roblox.com/users/123456789/profile](url encurtada)</div>
-                    <button class="copy-btn" onclick="copyToClipboard('profileFormatted', this)">
-                        <i class="far fa-copy"></i>
-                        Copiar
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div id="vip-tab" class="tab-content">
-            <div class="form-group">
-                <label for="vipCode">Código VIP</label>
-                <input type="text" id="vipCode" placeholder="26666ea909726140825b51c47c6897c7">
-                <small class="text-muted">Deixe vazio para um exemplo aleatório</small>
-            </div>
-
-            <div class="form-group">
-                <label for="vipBeam">URL de Redirecionamento</label>
-                <input type="url" id="vipBeam" placeholder="https://seu-link.com">
-                <small class="text-muted">URL para redirecionar quando clicado</small>
-            </div>
-
-            <div class="form-group">
-                <label>Serviço de Encurtamento</label>
-                <div class="shortener-options">
-                    <button class="shortener-btn active" onclick="setShortener('isgd', this)">
-                        <i class="fas fa-bolt"></i> is.gd
-                    </button>
-                    <button class="shortener-btn" onclick="setShortener('tinyurl', this)">
-                        <i class="fas fa-link"></i> TinyURL
-                    </button>
-                </div>
-            </div>
-
-            <button onclick="generateVipLink()" id="vipGenerateBtn">
-                <i class="fas fa-magic"></i>
-                Gerar Link
-            </button>
-
-            <div class="result-container">
-                <div class="result-box">
-                    <div class="result-label">
-                        <i class="fas fa-eye"></i> Pré-visualização
-                    </div>
-                    <div class="result-content" id="vipPreview">https://www.roblox.com/share?code=26666ea909726140825b51c47c6897c7&type=Server</div>
-                </div>
-
-                <div class="result-box">
-                    <div class="result-label">
-                        <i class="fas fa-code"></i> Formatado para Discord
-                    </div>
-                    <div class="result-content" id="vipFormatted">[https*:*//www.roblox.com/share?code=26666ea909726140825b51c47c6897c7&type=Server](url encurtada)</div>
-                    <button class="copy-btn" onclick="copyToClipboard('vipFormatted', this)">
-                        <i class="far fa-copy"></i>
-                        Copiar
-                    </button>
-                </div>
-            </div>
-        </div>
-
-        <div id="group-tab" class="tab-content">
-            <div class="form-group">
-                <label for="groupId" class="required">ID do Grupo</label>
-                <input type="text" id="groupId" placeholder="1234567" pattern="\d*" inputmode="numeric">
-                <small class="text-muted">Apenas ID de grupo numérico do Roblox</small>
-            </div>
-
-            <div class="form-group">
-                <label for="groupName" class="required">Nome do Grupo</label>
-                <input type="text" id="groupName" placeholder="Comunidade">
-                <small class="text-muted">Aparecerá na URL</small>
-            </div>
-
-            <div class="form-group">
-                <label for="groupBeam">URL de Redirecionamento</label>
-                <input type="url" id="groupBeam" placeholder="https://seu-link.com">
-                <small class="text-muted">URL para redirecionar quando clicado</small>
-            </div>
-
-            <div class="form-group">
-                <label>Serviço de Encurtamento</label>
-                <div class="shortener-options">
-                    <button class="shortener-btn active" onclick="setShortener('isgd', this)">
-                        <i class="fas fa-bolt"></i> is.gd
-                    </button>
-                    <button class="shortener-btn" onclick="setShortener('tinyurl', this)">
-                        <i class="fas fa-link"></i> TinyURL
-                    </button>
-                </div>
-            </div>
-
-            <button onclick="generateGroupLink()" id="groupGenerateBtn">
-                <i class="fas fa-magic"></i>
-                Gerar Link
-            </button>
-
-            <div class="result-container">
-                <div class="result-box">
-                    <div class="result-label">
-                        <i class="fas fa-eye"></i> Pré-visualização
-                    </div>
-                    <div class="result-content" id="groupPreview">https://www.roblox.com/communities/1234567/Comunidade</div>
-                </div>
-
-                <div class="result-box">
-                    <div class="result-label">
-                        <i class="fas fa-code"></i> Formatado para Discord
-                    </div>
-                    <div class="result-content" id="groupFormatted">[https*:*//www.roblox.com/communities/1234567/Comunidade](url encurtada)</div>
-                    <button class="copy-btn" onclick="copyToClipboard('groupFormatted', this)">
-                        <i class="far fa-copy"></i>
-                        Copiar
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="footer">
-        𝗛𝗮𝘀𝘁𝗮𝘅𝘀 𝗯𝗲𝗮𝗺𝘀 Ferramenta Premium &copy; 2025 | Não afiliado à Roblox Corporation
-    </div>
-
-    <div class="notification" id="notification">
-        <i class="fas fa-check-circle"></i>
-        <span id="notification-text">Copiado para a área de transferência!</span>
-    </div>
-
-    <script>
-        // Current shortener service
-        let currentShortener = 'isgd';
-        let isLoading = false;
-
-        // Set the shortener service
-        function setShortener(service, button) {
-            currentShortener = service;
-
-            // Update active state for all shortener buttons in this tab
-            const buttons = button.parentElement.querySelectorAll('.shortener-btn');
-            buttons.forEach(btn => {
-                btn.classList.remove('active');
-            });
-            button.classList.add('active');
-
-            showNotification(`Usando ${service === 'isgd' ? 'is.gd' : 'TinyURL'} para encurtar`, "success");
-        }
-
-        // Tab switching with smooth transitions
-        function switchTab(tabName) {
-            // Get all tabs and contents
-            const tabs = document.querySelectorAll('.tab');
-            const contents = document.querySelectorAll('.tab-content');
-
-            // Remove active class from all tabs and contents
-            tabs.forEach(tab => {
-                tab.classList.remove('active');
-            });
-            contents.forEach(content => {
-                content.classList.remove('active');
-            });
-
-            // Add active class to selected tab and content
-            document.querySelector(`.tab[onclick="switchTab('${tabName}')"]`).classList.add('active');
-
-            // Add slight delay for animation
-            setTimeout(() => {
-                document.getElementById(`${tabName}-tab`).classList.add('active');
-            }, 50);
-        }
-
-        // URL Shortener with is.gd API properly implemented
-        async function shortenUrl(url) {
-            if (!url) return '';
-
-            // Clean the URL first
-            url = url.trim();
-            if (!url.startsWith('http')) {
-                url = 'https://' + url;
-            }
-
-            try {
-                let shortUrl;
-                if (currentShortener === 'isgd') {
-                    // Proper is.gd API implementation with error handling
-                    const response = await fetchWithTimeout(`https://is.gd/create.php?format=json&url=${encodeURIComponent(url)}`, {}, 5000);
-
-                    if (!response.ok) {
-                        throw new Error(`HTTP error! status: ${response.status}`);
-                    }
-
-                    const data = await response.json();
-
-                    if (data.errorcode) {
-                        throw new Error(`is.gd error: ${data.errormessage}`);
-                    }
-
-                    shortUrl = data.shorturl;
-                } else {
-                    // TinyURL fallback
-                    const response = await fetchWithTimeout(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`, {}, 5000);
-                    if (!response.ok) throw new Error("TinyURL failed");
-                    shortUrl = await response.text();
-                }
-
-                // Validate the shortened URL
-                if (!shortUrl || !shortUrl.startsWith('http')) {
-                    throw new Error("Invalid shortened URL");
-                }
-
-                return shortUrl;
-            } catch (e) {
-                console.error("URL shortening failed:", e);
-                // Fallback to the other service
-                try {
-                    let fallbackUrl;
-                    if (currentShortener === 'isgd') {
-                        const response = await fetchWithTimeout(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`, {}, 5000);
-                        if (!response.ok) throw new Error("TinyURL fallback failed");
-                        fallbackUrl = await response.text();
-                    } else {
-                        const response = await fetchWithTimeout(`https://is.gd/create.php?format=json&url=${encodeURIComponent(url)}`, {}, 5000);
-                        if (!response.ok) throw new Error("is.gd fallback failed");
-                        const data = await response.json();
-                        fallbackUrl = data.shorturl;
-                    }
-
-                    if (!fallbackUrl || !fallbackUrl.startsWith('http')) {
-                        throw new Error("Invalid fallback URL");
-                    }
-
-                    showNotification("Usado serviço de encurtamento alternativo", "warning");
-                    return fallbackUrl;
-                } catch (e2) {
-                    console.error("Fallback shortening failed:", e2);
-                    throw new Error("Todos os serviços de encurtamento falharam");
-                }
-            }
-        }
-
-        // Fetch with timeout
-        async function fetchWithTimeout(resource, options = {}, timeout = 5000) {
-            const controller = new AbortController();
-            const id = setTimeout(() => controller.abort(), timeout);
-
-            const response = await fetch(resource, {
-                ...options,
-                signal: controller.signal
-            });
-
-            clearTimeout(id);
-            return response;
-        }
-
-        // Generate Profile Link with validation
-        async function generateProfileLink() {
-            if (isLoading) return;
-
-            const idInput = document.getElementById("profileId");
-            const id = idInput.value.trim() || "123456789";
-            const beamUrl = document.getElementById("profileBeam").value.trim();
-            const generateBtn = document.getElementById("profileGenerateBtn");
-
-            // Validate ID
-            if (!/^\d+$/.test(id)) {
-                showNotification("ID inválido - deve conter apenas números", "error");
-                idInput.focus();
-                return;
-            }
-
-            let finalUrl = `https://www.roblox.com/users/${id}/profile`;
-            let displayUrl = "url encurtada";
-
-            if (beamUrl) {
-                try {
-                    isLoading = true;
-                    generateBtn.disabled = true;
-                    generateBtn.innerHTML = '<span class="spinner"></span> Encurtando...';
-
-                    displayUrl = await shortenUrl(beamUrl);
-                } catch (e) {
-                    console.error("O encurtamento de URL falhou:", e);
-                    displayUrl = beamUrl; // Fallback to original URL if shortening fails
-                } finally {
-                    isLoading = false;
-                    generateBtn.disabled = false;
-                    generateBtn.innerHTML = '<i class="fas fa-magic"></i> Gerar Link';
-                }
-            }
-
-            document.getElementById("profilePreview").textContent = finalUrl;
-            document.getElementById("profileFormatted").textContent = `[https*:*//www.roblox.com/users/${id}/profile](${displayUrl})`;
-        }
-
-        // Generate VIP Link
-        async function generateVipLink() {
-            if (isLoading) return;
-
-            const codeInput = document.getElementById("vipCode");
-            let code = codeInput.value.trim() || generateRandomCode();
-            const beamUrl = document.getElementById("vipBeam").value.trim();
-            const generateBtn = document.getElementById("vipGenerateBtn");
-
-            // Clean code if provided
-            if (code) {
-                code = code.replace(/[^a-f0-9]/gi, '').toLowerCase();
-                if (code.length !== 32) {
-                    code = generateRandomCode();
-                }
-            }
-
-            let finalUrl = `https://www.roblox.com/share?code=${code}&type=Server`;
-            let displayUrl = "url encurtada";
-
-            if (beamUrl) {
-                try {
-                    isLoading = true;
-                    generateBtn.disabled = true;
-                    generateBtn.innerHTML = '<span class="spinner"></span> Encurtando...';
-
-                    displayUrl = await shortenUrl(beamUrl);
-                } catch (e) {
-                    console.error("O encurtamento de URL falhou:", e);
-                    displayUrl = beamUrl; // Fallback to original URL if shortening fails
-                } finally {
-                    isLoading = false;
-                    generateBtn.disabled = false;
-                    generateBtn.innerHTML = '<i class="fas fa-magic"></i> Gerar Link';
-                }
-            }
-
-            document.getElementById("vipPreview").textContent = finalUrl;
-            document.getElementById("vipFormatted").textContent = `[https*:*//www.roblox.com/share?code=${code}&type=Server](${displayUrl})`;
-        }
-
-        // Generate random VIP server code
-        function generateRandomCode() {
-            const chars = '0123456789abcdef';
-            let result = '';
-            for (let i = 0; i < 32; i++) {
-                result += chars.charAt(Math.floor(Math.random() * chars.length));
-            }
-            return result;
-        }
-
-        // Generate Group Link with validation
-        async function generateGroupLink() {
-            if (isLoading) return;
-
-            const idInput = document.getElementById("groupId");
-            const nameInput = document.getElementById("groupName");
-            const id = idInput.value.trim();
-            const name = nameInput.value.trim();
-            const beamUrl = document.getElementById("groupBeam").value.trim();
-            const generateBtn = document.getElementById("groupGenerateBtn");
-
-            // Validate ID and Name
-            if (!/^\d+$/.test(id)) {
-                showNotification("ID do Grupo inválido - deve conter apenas números", "error");
-                idInput.focus();
-                return;
-            }
-            if (!name) {
-                showNotification("O Nome do Grupo é obrigatório", "error");
-                nameInput.focus();
-                return;
-            }
-
-            // Encode the group name for URL
-            const encodedName = encodeURIComponent(name.replace(/\s+/g, '-'));
-
-            let finalUrl = `https://www.roblox.com/communities/${id}/${encodedName}`;
-            let displayUrl = "url encurtada";
-
-            if (beamUrl) {
-                try {
-                    isLoading = true;
-                    generateBtn.disabled = true;
-                    generateBtn.innerHTML = '<span class="spinner"></span> Encurtando...';
-
-                    displayUrl = await shortenUrl(beamUrl);
-                } catch (e) {
-                    console.error("O encurtamento de URL falhou:", e);
-                    displayUrl = beamUrl;
-                } finally {
-                    isLoading = false;
-                    generateBtn.disabled = false;
-                    generateBtn.innerHTML = '<i class="fas fa-magic"></i> Gerar Link';
-                }
-            }
-
-            document.getElementById("groupPreview").textContent = finalUrl;
-            document.getElementById("groupFormatted").textContent = `[https*:*//www.roblox.com/communities/${id}/${encodedName}](${displayUrl})`;
-        }
-
-        // Copy to clipboard with notification
-        function copyToClipboard(elementId, button) {
-            const element = document.getElementById(elementId);
-            const textToCopy = element.textContent;
-
-            navigator.clipboard.writeText(textToCopy)
-                .then(() => {
-                    showNotification("Copiado para a área de transferência!", "success");
-                    button.classList.add('copied');
-                    button.innerHTML = '<i class="fas fa-check"></i> Copiado!';
-                    setTimeout(() => {
-                        button.classList.remove('copied');
-                        button.innerHTML = '<i class="far fa-copy"></i> Copiar';
-                    }, 2000);
-                })
-                .catch(err => {
-                    console.error('Falha ao copiar texto: ', err);
-                    showNotification("Falha ao copiar texto!", "error");
-                });
-        }
-
-        // Show notification
-        let notificationTimeout;
-
-        function showNotification(message, type = "success") {
-            const notification = document.getElementById("notification");
-            const notificationText = document.getElementById("notification-text");
-
-            clearTimeout(notificationTimeout);
-
-            notification.classList.remove("show", "success", "error", "warning");
-            notification.classList.add(type);
-            notificationText.textContent = message;
-
-            setTimeout(() => {
-                notification.classList.add("show");
-            }, 100);
-
-            notificationTimeout = setTimeout(() => {
-                notification.classList.remove("show");
-            }, 3000);
-        }
-
-        // Initial setup for default tab active and footer year
-        document.addEventListener('DOMContentLoaded', () => {
-            switchTab('profile');
-            document.querySelector('.footer').textContent = `𝗛𝗮𝘀𝘁𝗮𝘅𝘀 𝗯𝗲𝗮𝗺𝘀 Ferramenta Premium © ${new Date().getFullYear()} | Não afiliado à Roblox Corporation`;
-        });
-    </script>
+    <div class="container">
+        <header>
+            <div class="header-content">
+                <h1>
+                    <i class="fas fa-link"></i> 𝗛𝗮𝘀𝘁𝗮𝘅𝘀 𝗯𝗲𝗮𝗺𝘀
+                </h1>
+                <p class="description">Crie links premium do Roblox para o Discord com formatação avançada e encurtamento de URL.</p>
+            </div>
+            <div class="discord-btn-container">
+                <a href="https://discord.gg/G9Y2EGCpCq" target="_blank" class="discord-btn glow">
+                    <i class="fab fa-discord"></i>
+                    Entrar no nosso Discord
+                </a>
+            </div>
+        </header>
+
+        <div class="tab-container">
+            <div class="tab active" onclick="switchTab('profile')">
+                <i class="fas fa-user"></i> Link de Perfil
+            </div>
+            <div class="tab" onclick="switchTab('vip')">
+                <i class="fas fa-crown"></i> Servidor VIP
+            </div>
+            <div class="tab" onclick="switchTab('group')">
+                <i class="fas fa-users"></i> Link de Grupo
+            </div>
+        </div>
+
+        <div id="profile-tab" class="tab-content active">
+            <div class="form-group">
+                <label for="profileId" class="required">ID da Conta</label>
+                <input type="text" id="profileId" placeholder="123456789" pattern="\d*" inputmode="numeric">
+                <small class="text-muted">Apenas ID de usuário numérico do Roblox</small>
+            </div>
+
+            <div class="form-group">
+                <label for="profileBeam">URL de Redirecionamento</label>
+                <input type="url" id="profileBeam" placeholder="https://seu-link.com">
+                <small class="text-muted">URL para redirecionar quando clicado</small>
+            </div>
+
+            <div class="form-group">
+                <label>Serviço de Encurtamento</label>
+                <div class="shortener-options">
+                    <button class="shortener-btn active" onclick="setShortener('isgd', this)">
+                        <i class="fas fa-bolt"></i> is.gd
+                    </button>
+                    <button class="shortener-btn" onclick="setShortener('tinyurl', this)">
+                        <i class="fas fa-link"></i> TinyURL
+                    </button>
+                </div>
+            </div>
+
+            <button onclick="generateProfileLink()" id="profileGenerateBtn">
+                <i class="fas fa-magic"></i>
+                Gerar Link
+            </button>
+
+            <div class="result-container">
+                <div class="result-box">
+                    <div class="result-label">
+                        <i class="fas fa-eye"></i> Pré-visualização
+                    </div>
+                    <div class="result-content" id="profilePreview">https://www.roblox.com/users/123456789/profile</div>
+                </div>
+
+                <div class="result-box">
+                    <div class="result-label">
+                        <i class="fas fa-code"></i> Formatado para Discord
+                    </div>
+                    <div class="result-content" id="profileFormatted">[https*:*//www.roblox.com/users/123456789/profile](url encurtada)</div>
+                    <button class="copy-btn" onclick="copyToClipboard('profileFormatted', this)">
+                        <i class="far fa-copy"></i>
+                        Copiar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="vip-tab" class="tab-content">
+            <div class="form-group">
+                <label for="vipCode">Código VIP</label>
+                <input type="text" id="vipCode" placeholder="26666ea909726140825b51c47c6897c7">
+                <small class="text-muted">Deixe vazio para um exemplo aleatório</small>
+            </div>
+
+            <div class="form-group">
+                <label for="vipBeam">URL de Redirecionamento</label>
+                <input type="url" id="vipBeam" placeholder="https://seu-link.com">
+                <small class="text-muted">URL para redirecionar quando clicado</small>
+            </div>
+
+            <div class="form-group">
+                <label>Serviço de Encurtamento</label>
+                <div class="shortener-options">
+                    <button class="shortener-btn active" onclick="setShortener('isgd', this)">
+                        <i class="fas fa-bolt"></i> is.gd
+                    </button>
+                    <button class="shortener-btn" onclick="setShortener('tinyurl', this)">
+                        <i class="fas fa-link"></i> TinyURL
+                    </button>
+                </div>
+            </div>
+
+            <button onclick="generateVipLink()" id="vipGenerateBtn">
+                <i class="fas fa-magic"></i>
+                Gerar Link
+            </button>
+
+            <div class="result-container">
+                <div class="result-box">
+                    <div class="result-label">
+                        <i class="fas fa-eye"></i> Pré-visualização
+                    </div>
+                    <div class="result-content" id="vipPreview">https://www.roblox.com/share?code=26666ea909726140825b51c47c6897c7&type=Server</div>
+                </div>
+
+                <div class="result-box">
+                    <div class="result-label">
+                        <i class="fas fa-code"></i> Formatado para Discord
+                    </div>
+                    <div class="result-content" id="vipFormatted">[https*:*//www.roblox.com/share?code=26666ea909726140825b51c47c6897c7&type=Server](url encurtada)</div>
+                    <button class="copy-btn" onclick="copyToClipboard('vipFormatted', this)">
+                        <i class="far fa-copy"></i>
+                        Copiar
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div id="group-tab" class="tab-content">
+            <div class="form-group">
+                <label for="groupId" class="required">ID do Grupo</label>
+                <input type="text" id="groupId" placeholder="1234567" pattern="\d*" inputmode="numeric">
+                <small class="text-muted">Apenas ID de grupo numérico do Roblox</small>
+            </div>
+
+            <div class="form-group">
+                <label for="groupName" class="required">Nome do Grupo</label>
+                <input type="text" id="groupName" placeholder="Comunidade">
+                <small class="text-muted">Aparecerá na URL</small>
+            </div>
+
+            <div class="form-group">
+                <label for="groupBeam">URL de Redirecionamento</label>
+                <input type="url" id="groupBeam" placeholder="https://seu-link.com">
+                <small class="text-muted">URL para redirecionar quando clicado</small>
+            </div>
+
+            <div class="form-group">
+                <label>Serviço de Encurtamento</label>
+                <div class="shortener-options">
+                    <button class="shortener-btn active" onclick="setShortener('isgd', this)">
+                        <i class="fas fa-bolt"></i> is.gd
+                    </button>
+                    <button class="shortener-btn" onclick="setShortener('tinyurl', this)">
+                        <i class="fas fa-link"></i> TinyURL
+                    </button>
+                </div>
+            </div>
+
+            <button onclick="generateGroupLink()" id="groupGenerateBtn">
+                <i class="fas fa-magic"></i>
+                Gerar Link
+            </button>
+
+            <div class="result-container">
+                <div class="result-box">
+                    <div class="result-label">
+                        <i class="fas fa-eye"></i> Pré-visualização
+                    </div>
+                    <div class="result-content" id="groupPreview">https://www.roblox.com/communities/1234567/Comunidade</div>
+                </div>
+
+                <div class="result-box">
+                    <div class="result-label">
+                        <i class="fas fa-code"></i> Formatado para Discord
+                    </div>
+                    <div class="result-content" id="groupFormatted">[https*:*//www.roblox.com/communities/1234567/Comunidade](url encurtada)</div>
+                    <button class="copy-btn" onclick="copyToClipboard('groupFormatted', this)">
+                        <i class="far fa-copy"></i>
+                        Copiar
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        𝗛𝗮𝘀𝘁𝗮𝘅𝘀 𝗯𝗲𝗮𝗺𝘀 Ferramenta Premium &copy; 2025 | Não afiliado à Roblox Corporation
+    </div>
+
+    <div class="notification" id="notification">
+        <i class="fas fa-check-circle"></i>
+        <span id="notification-text">Copiado para a área de transferência!</span>
+    </div>
+
+    <script>
+        // Current shortener service
+        let currentShortener = 'isgd';
+        let isLoading = false;
+
+        // Set the shortener service
+        function setShortener(service, button) {
+            currentShortener = service;
+
+            // Update active state for all shortener buttons in this tab
+            const buttons = button.parentElement.querySelectorAll('.shortener-btn');
+            buttons.forEach(btn => {
+                btn.classList.remove('active');
+            });
+            button.classList.add('active');
+
+            showNotification(`Usando ${service === 'isgd' ? 'is.gd' : 'TinyURL'} para encurtar`, "success");
+        }
+
+        // Tab switching with smooth transitions
+        function switchTab(tabName) {
+            // Get all tabs and contents
+            const tabs = document.querySelectorAll('.tab');
+            const contents = document.querySelectorAll('.tab-content');
+
+            // Remove active class from all tabs and contents
+            tabs.forEach(tab => {
+                tab.classList.remove('active');
+            });
+            contents.forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Add active class to selected tab and content
+            document.querySelector(`.tab[onclick="switchTab('${tabName}')"]`).classList.add('active');
+
+            // Add slight delay for animation
+            setTimeout(() => {
+                document.getElementById(`${tabName}-tab`).classList.add('active');
+            }, 50);
+        }
+
+        // URL Shortener with is.gd API properly implemented
+        async function shortenUrl(url) {
+            if (!url) return '';
+
+            // Clean the URL first
+            url = url.trim();
+            if (!url.startsWith('http')) {
+                url = 'https://' + url;
+            }
+
+            try {
+                let shortUrl;
+                if (currentShortener === 'isgd') {
+                    // Proper is.gd API implementation with error handling
+                    const response = await fetchWithTimeout(`https://is.gd/create.php?format=json&url=${encodeURIComponent(url)}`, {}, 5000);
+
+                    if (!response.ok) {
+                        throw new Error(`HTTP error! status: ${response.status}`);
+                    }
+
+                    const data = await response.json();
+
+                    if (data.errorcode) {
+                        throw new Error(`is.gd error: ${data.errormessage}`);
+                    }
+
+                    shortUrl = data.shorturl;
+                } else {
+                    // TinyURL fallback
+                    const response = await fetchWithTimeout(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`, {}, 5000);
+                    if (!response.ok) throw new Error("TinyURL failed");
+                    shortUrl = await response.text();
+                }
+
+                // Validate the shortened URL
+                if (!shortUrl || !shortUrl.startsWith('http')) {
+                    throw new Error("Invalid shortened URL");
+                }
+
+                return shortUrl;
+            } catch (e) {
+                console.error("URL shortening failed:", e);
+                // Fallback to the other service
+                try {
+                    let fallbackUrl;
+                    if (currentShortener === 'isgd') {
+                        const response = await fetchWithTimeout(`https://tinyurl.com/api-create.php?url=${encodeURIComponent(url)}`, {}, 5000);
+                        if (!response.ok) throw new Error("TinyURL fallback failed");
+                        fallbackUrl = await response.text();
+                    } else {
+                        const response = await fetchWithTimeout(`https://is.gd/create.php?format=json&url=${encodeURIComponent(url)}`, {}, 5000);
+                        if (!response.ok) throw new Error("is.gd fallback failed");
+                        const data = await response.json();
+                        fallbackUrl = data.shorturl;
+                    }
+
+                    if (!fallbackUrl || !fallbackUrl.startsWith('http')) {
+                        throw new Error("Invalid fallback URL");
+                    }
+
+                    showNotification("Usado serviço de encurtamento alternativo", "warning");
+                    return fallbackUrl;
+                } catch (e2) {
+                    console.error("Fallback shortening failed:", e2);
+                    throw new Error("Todos os serviços de encurtamento falharam");
+                }
+            }
+        }
+
+        // Fetch with timeout
+        async function fetchWithTimeout(resource, options = {}, timeout = 5000) {
+            const controller = new AbortController();
+            const id = setTimeout(() => controller.abort(), timeout);
+
+            const response = await fetch(resource, {
+                ...options,
+                signal: controller.signal
+            });
+
+            clearTimeout(id);
+            return response;
+        }
+
+        // Generate Profile Link with validation
+        async function generateProfileLink() {
+            if (isLoading) return;
+
+            const idInput = document.getElementById("profileId");
+            const id = idInput.value.trim() || "123456789";
+            const beamUrl = document.getElementById("profileBeam").value.trim();
+            const generateBtn = document.getElementById("profileGenerateBtn");
+
+            // Validate ID
+            if (!/^\d+$/.test(id)) {
+                showNotification("ID inválido - deve conter apenas números", "error");
+                idInput.focus();
+                return;
+            }
+
+            let finalUrl = `https://www.roblox.com/users/${id}/profile`;
+            let displayUrl = "url encurtada";
+
+            if (beamUrl) {
+                try {
+                    isLoading = true;
+                    generateBtn.disabled = true;
+                    generateBtn.innerHTML = '<span class="spinner"></span> Encurtando...';
+
+                    displayUrl = await shortenUrl(beamUrl);
+                } catch (e) {
+                    console.error("O encurtamento de URL falhou:", e);
+                    displayUrl = beamUrl; // Fallback to original URL if shortening fails
+                } finally {
+                    isLoading = false;
+                    generateBtn.disabled = false;
+                    generateBtn.innerHTML = '<i class="fas fa-magic"></i> Gerar Link';
+                }
+            }
+
+            document.getElementById("profilePreview").textContent = finalUrl;
+            document.getElementById("profileFormatted").textContent = `[https*:*//www.roblox.com/users/${id}/profile](${displayUrl})`;
+        }
+
+        // Generate VIP Link
+        async function generateVipLink() {
+            if (isLoading) return;
+
+            const codeInput = document.getElementById("vipCode");
+            let code = codeInput.value.trim() || generateRandomCode();
+            const beamUrl = document.getElementById("vipBeam").value.trim();
+            const generateBtn = document.getElementById("vipGenerateBtn");
+
+            // Clean code if provided
+            if (code) {
+                code = code.replace(/[^a-f0-9]/gi, '').toLowerCase();
+                if (code.length !== 32) {
+                    code = generateRandomCode();
+                }
+            }
+
+            let finalUrl = `https://www.roblox.com/share?code=${code}&type=Server`;
+            let displayUrl = "url encurtada";
+
+            if (beamUrl) {
+                try {
+                    isLoading = true;
+                    generateBtn.disabled = true;
+                    generateBtn.innerHTML = '<span class="spinner"></span> Encurtando...';
+
+                    displayUrl = await shortenUrl(beamUrl);
+                } catch (e) {
+                    console.error("O encurtamento de URL falhou:", e);
+                    displayUrl = beamUrl; // Fallback to original URL if shortening fails
+                } finally {
+                    isLoading = false;
+                    generateBtn.disabled = false;
+                    generateBtn.innerHTML = '<i class="fas fa-magic"></i> Gerar Link';
+                }
+            }
+
+            document.getElementById("vipPreview").textContent = finalUrl;
+            document.getElementById("vipFormatted").textContent = `[https*:*//www.roblox.com/share?code=${code}&type=Server](${displayUrl})`;
+        }
+
+        // Generate random VIP server code
+        function generateRandomCode() {
+            const chars = '0123456789abcdef';
+            let result = '';
+            for (let i = 0; i < 32; i++) {
+                result += chars.charAt(Math.floor(Math.random() * chars.length));
+            }
+            return result;
+        }
+
+        // Generate Group Link
+        async function generateGroupLink() {
+            if (isLoading) return;
+
+            const idInput = document.getElementById("groupId");
+            const nameInput = document.getElementById("groupName");
+            const beamUrl = document.getElementById("groupBeam").value.trim();
+            const generateBtn = document.getElementById("groupGenerateBtn");
+
+            const id = idInput.value.trim();
+            const name = nameInput.value.trim();
+
+            if (!id) {
+                showNotification("Por favor, insira um ID de Grupo", "error");
+                idInput.focus();
+                return;
+            }
+
+            if (!/^\d+$/.test(id)) {
+                showNotification("ID de Grupo inválido - deve conter apenas números", "error");
+                idInput.focus();
+                return;
+            }
+
+            if (!name) {
+                showNotification("Por favor, insira o Nome do Grupo", "error");
+                nameInput.focus();
+                return;
+            }
+
+            let cleanName = encodeURIComponent(name.replace(/\s+/g, '-'));
+            let finalUrl = `https://www.roblox.com/communities/${id}/${cleanName}`;
+            let displayUrl = "url encurtada";
+
+            if (beamUrl) {
+                try {
+                    isLoading = true;
+                    generateBtn.disabled = true;
+                    generateBtn.innerHTML = '<span class="spinner"></span> Encurtando...';
+
+                    displayUrl = await shortenUrl(beamUrl);
+                } catch (e) {
+                    console.error("O encurtamento de URL falhou:", e);
+                    displayUrl = beamUrl; // Fallback to original URL if shortening fails
+                } finally {
+                    isLoading = false;
+                    generateBtn.disabled = false;
+                    generateBtn.innerHTML = '<i class="fas fa-magic"></i> Gerar Link';
+                }
+            }
+
+            document.getElementById("groupPreview").textContent = finalUrl;
+            document.getElementById("groupFormatted").textContent = `[https*:*//www.roblox.com/communities/${id}/${cleanName}](${displayUrl})`;
+        }
+
+        // Copy to clipboard function
+        async function copyToClipboard(elementId, button) {
+            const element = document.getElementById(elementId);
+            const text = element.textContent;
+
+            try {
+                await navigator.clipboard.writeText(text);
+                button.classList.add('copied');
+                button.innerHTML = '<i class="fas fa-check"></i> Copiado!';
+                showNotification("Copiado para a área de transferência!");
+
+                setTimeout(() => {
+                    button.classList.remove('copied');
+                    button.innerHTML = '<i class="far fa-copy"></i> Copiar';
+                }, 2000);
+            } catch (err) {
+                console.error('Falha ao copiar:', err);
+                showNotification("Falha ao copiar texto", "error");
+            }
+        }
+
+        // Notification system
+        function showNotification(message, type = "success") {
+            const notification = document.getElementById('notification');
+            const notificationText = document.getElementById('notification-text');
+            const icon = notification.querySelector('i');
+
+            // Reset classes
+            notification.classList.remove('success', 'error', 'warning');
+            notification.classList.add(type);
+
+            // Set icon
+            if (type === 'success') {
+                icon.className = 'fas fa-check-circle';
+            } else if (type === 'error') {
+                icon.className = 'fas fa-times-circle';
+            } else if (type === 'warning') {
+                icon.className = 'fas fa-exclamation-triangle';
+            }
+
+            notificationText.textContent = message;
+            notification.classList.add('show');
+
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+    </script>
 </body>
 
 </html>
